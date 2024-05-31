@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <nav>
+                <div class="menu-item">
+                    <a href="#" onclick="showAllMice()">Меню</a>
+                    <div class="submenu">
+                        <a href="#" onclick="filterMice('t-shirt')">футболка</a>
+                        <a href="#" onclick="filterMice('ball')">мяч</a>
+                        <a href="#" onclick="filterMice('bottle')">бутилки</a>
+                        <a href="#" onclick="filterMice('shields')">щитки</a>
+                        <a href="#" onclick="filterMice('boots')">бутси</a>
+                    </div>
+                </div>
+                <a href="#">Про нас</a>
+                <a href="#">Спеціальні пропозиції</a>
+            </nav>
+        </div>
+          <div class="list">
+          </div>
+        <div class="logo">
+            <img src="image/OIP (1).jfif" alt="" srcset="">
+        </div>
+
+        <div class="contact-into">
+            <p>телефонж (044) 123-45 67</p>
+            <p>Email: inf@onfgrtfye.com.ue</p>
+            <p>Адреса:Київ,вул,Анни Ахматовойб 22 </p>
+            <div class="social-links">
+                <a href="#">,<img src="img/R.png" alt="" srcset="">
+                    <a href="#">,<img src="img/г.png" alt="" srcset="">
+                        <a href="#">,<img
+                                src="img/png-transparent-facebook-logo-computer-icons-facebook-blue-trademark-logo.png"
+                                alt="" srcset="">
+            </div>
+    </header>
+    <div class="shopping_cart">
+        <div class="shopping">
+            <img src="image/оболол.png">
+            <span class="quantity">0</span>
+        </div>
+    </div>
+    <div class="list">
+    </div>
+    <div class="cards">
+        <h1>Товари у кошику</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Закрити</div>
+        </div>
+    </div>
+    <div class="cards-container">
+        
+        <div class="card t-shirt" onclick="openModal('modal1')">
+            <img src="image/1.jfif"" >
+            <h2>кастюм сборной украини</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(0)">додати в кошик</button>
+        </div>
+        <div class=" card t-shirt" onclick="openModal('modal2')">
+            <img src="image/2.jfif">
+            <h2>ретроооо</h2>
+            <p>в наявності</p>
+            <p>5000 гривен</p>
+            <button onclick="addToCard(1)">додати в кошик</button>
+        </div>
+        <div class=" card t-shirt">
+            <img src="image/3.jfif" onclick="openModal('modal3')">
+            <h2>прошлий сизон япония</h2>
+            <p>в наявності</p>
+            <p>2000 гривен</p>
+            <button onclick="addToCard(2)">додати в кошик</button>
+        </div>
+        <div class=" card t-shirt">
+            <img src="image/4.jfif" onclick="openModal('modal4')">
+            <h2>анимеее</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(3)">додати в кошик</button>
+        </div>
+        <div class=" card t-shirt">
+            <img src="image/5.jfif" onclick="openModal('modal5')">
+            <h2>волни япония</h2>
+            <p>в наявності</p>
+            <p>2000 гривен</p>
+            <button onclick="addToCard(4)">додати в кошик</button>
+        </div>
+        <div class=" card t-shirt">
+            <img src="image/6.jfif" onclick="openModal('modal6')">
+            <h2>новий сизон</h2>
+            <p>в наявності</p>
+            <p>4000 гривен</p>
+            <button onclick="addToCard(5)">додати в кошик</button>
+        </div>
+        <div class=" card ball">
+            <img src="image/7.jfif" onclick="openModal('modal7')">
+            <h2>мяч</h2>
+            <p>в наявності</p>
+            <p>10000 гривен</p>
+            <button onclick="addToCard(6)">додати в кошик</button>
+        </div>
+        <div class=" card ball">
+            <img src="image/8.jpeg" onclick="openModal('modal8')">
+            <h2>мяч</h2>
+            <p>в наявності</p>
+            <p>10000 гривен</p>
+            <button onclick="addToCard(7)">додати в кошик</button>
+        </div>
+        <div class=" card shields">
+            <img src="image/9.jfif" onclick="openModal('modal9')">
+            <h2>скоросні от килиано мпабе прочно</h2>
+            <p>в наявності</p>
+            <p>500 гривен</p>
+            <button onclick="addToCard(8)">додати в кошик</button>
+        </div>
+        <div class=" card shields">
+            <img src="image/10.jfif" onclick="openModal('modal10')">
+            <h2>криш</h2>
+            <p>в наявності</p>
+            <p>500 гривен</p>
+            <button onclick="addToCard(9)">додати в кошик</button>
+        </div>
+        <div class=" card shields">
+            <img src="image/11.jfif" onclick="openModal('modal11')">
+            <h2>стикло новие</h2>
+            <p>в наявності</p>
+            <p>1000 гривен</p>
+            <button onclick="addToCard(10)">додати в кошик</button>
+        </div>
+        <div class=" card bottle">
+            <img src="image/я.jfif" onclick="openModal('modal12')">
+            <h2>чорние</h2>
+            <p>в наявності</p>
+            <p>1500 гривен</p>
+            <button onclick="addToCard(11)">додати в кошик</button>
+        </div>
+        <div class=" card bottle">
+            <img src="image/13.jfif" onclick="openModal('modal13')">
+            <h2>обливалка</h2>
+            <p>в наявності</p>
+            <p>90000 гривен</p>
+            <button onclick="addToCard(12)">додати в кошик</button>
+        </div>
+        <div class=" card bottle">
+            <img src="image/14.jfif" onclick="openModal('modal14')">
+            <h2>супер пупер бутилка</h2>
+            <p> не в наявності</p>
+            <p>тільки у мене</p>
+            <p>900000000 гривен</p>
+            <button onclick="addToCard(13)">додати в кошик</button>
+        
+        </div>
+        <div class=" card boots">
+            <img src="image/15.jfif" onclick="openModal('modal16')">
+            <h2>у марка</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(14)">додати в кошик</button>
+        </div>
+        <div class=" card boots">
+            <img src="image/16.jfif" onclick="openModal('modal17')">
+            <h2>у кости</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(15)">додати в кошик</button>
+        </div>
+        <div class=" card boots">
+            <img src="image/17.jfif" onclick="openModal('modal18')">
+            <h2>у мпапе</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(16)">додати в кошик</button>
+        </div>
+        <div class=" card boots">
+            <img src="image/18.jfif" onclick="openModal('modal19')">
+            <h2>рижики</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(17)">додати в кошик</button>
+
+        </div>
+        <div class=" card boots">
+            <img src="image/19.jfif" onclick="openModal('modal20')">
+            <h2>фантом</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(18)">додати в кошик</button>
+        </div>
+        <div class=" card boots">
+            <img src="image/20.jfifonclick=" onclick="openModal('modal21')">
+            <h2>жилезо</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(19)">додати в кошик</button>
+        </div>
+        <div class=" card boots">
+            <img src="image/21.jfif" onclick="openModal('modal22')">
+            <h2>у дебрюйне</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(20)">додати в кошик</button>
+        </div>
+        <div class="card t-shirt">
+            <img src="image/22.jfif" onclick="openModal('modal23')">
+            <h2>хола модрид</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(21)">додати в кошик</button>
+        </div>
+        <div class="card ball">
+            <img src="image/апл.jfif" onclick="openModal('modal24')">
+            <h2>мяч</h2>
+            <p>в наявності</p>
+            <p>2500 гривен</p>
+            <button onclick="addToCard(22)">додати в кошик</button>
+        </div>
+        <div class="card t-shirt">
+            <img src="image/4444444444444444444444444444444.jfif"onclick="openModal('modal25')" >
+            <h2>сити</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(23)">додати в кошик</button>
+        </div>
+        <div class="card t-shirt">
+            <img src="image/урадарсотоівсмф швсивм ин пр  момшшшшшшшцкщшмцбббббббббббк.jfif"onclick="openModal('modal26')"  >
+            <h2>интер</h2>
+            <p>в наявності</p>
+            <p>3000 гривен</p>
+            <button onclick="addToCard(24)">додати в кошик</button>
+        </div>
+        <div class="card t-shirt">
+            <img src="image/динамоооо.jpeg"onclick="openModal('modal26')">
+            <h2>красні</h2>
+            <p>в наявності</p>
+            <p>4000 гривен</p>
+            <button onclick="addToCard(25)">додати в кошик</button>
+        </div>
+        
+
+    </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-image" src="image/медний бик.jfif" alt="Mouse1">
+                    <div class="modal-info">
+                        <h2>Назва</h2>
+                        <p><strong>зборая України</strong> </p>
+                        <p><strong>сюда</strong></p>
+                        <ul>
+                            <li>спорт комплект для</li>
+                            <li>из флиса</li>
+                            <li>зборная украини</li>
+                            <li>joma</li>
+                            <li>шви</li>
+                            <li>шорти и футболка</li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                            <button onclick="addToCard(0)">додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-image" src="image/2.jfif" alt="Mouse1">
+                    <div class="modal-info">
+                        <h2>Назва</h2>
+                        <p><strong>зборая України</strong> </p>
+                        <p><strong>сюда</strong></p>
+                        <ul>
+                            <li>спорт комплект для</li>
+                            <li>из флиса</li>
+                            <li>зборная украини</li>
+                            <li>joma</li>
+                            <li>шви</li>
+                            <li>шорти и футболка</li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                            <button onclick="addToCard(1)">додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-image" src="image/3.jfif" alt="Mouse1">
+                    <div class="modal-info">
+                        <h2>Назва</h2>
+                        <p><strong>зборая України</strong> </p>
+                        <p><strong>сюда</strong></p>
+                        <ul>
+                            <li>спорт комплект для</li>
+                            <li>из флиса</li>
+                            <li>зборная украини</li>
+                            <li>joma</li>
+                            <li>шви</li>
+                            <li>шорти и футболка</li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                            <button onclick="addToCard(2)">додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/4.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(3)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal5')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/5.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(4)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal6" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal6')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/6.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(5)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal7" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal7')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/7.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(6)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal8" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal8')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/8.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(7)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal9" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal9')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/9.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(8)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal10" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal10')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/10.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(9)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal11" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal11')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/11.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(10)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal12" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal12')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/12.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(11)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal13" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal13')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(12)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal14" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal14')">&times;</span>
+                    <div class="modal-flex">
+                        <img class="modal-image" src="image/14.jfif" alt="Mouse1">
+                        <div class="modal-info">
+                            <h2>Назва</h2>
+                            <p><strong>зборая України</strong> </p>
+                            <p><strong>сюда</strong></p>
+                            <ul>
+                                <li>спорт комплект для</li>
+                                <li>из флиса</li>
+                                <li>зборная украини</li>
+                                <li>joma</li>
+                                <li>шви</li>
+                                <li>шорти и футболка</li>
+                            </ul>
+                            <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                                Експрес-доставка доступна за додаткову плату.</p>
+                                <button onclick="addToCard(13)">додати в кошик</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p>Телефон: (044) 123-45-67</p>
+                    <p>Email: info@onlineshop.com.ua</p>
+                    <p>Адреса: Київ, вул. Хрещатик, 1</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Інформація</h3>
+                    <ul>
+                        <li><a href="#">Доставка і оплата</a></li>
+                        <li><a href="#">Гарантія і повернення</a></li>
+                        <li><a href="#">Політика конфіденційності</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Соціальні мережі</h3>
+                    <div class="social-links">
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
+                                alt="Facebook"></a>
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/800px-Instagram_icon.png"
+                                alt="Instagram"></a>
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1245px-Logo_of_Twitter.svg.png"
+                                alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+</body>
+
+</html>
